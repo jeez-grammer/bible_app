@@ -1,6 +1,7 @@
 from app import create_app
 import logging
 import traceback
+from flask import redirect, url_for
 
 app = create_app()
 
@@ -12,15 +13,10 @@ logging.basicConfig(level=logging.ERROR)
 def test():
     return "Test route is working!"
 
-# Add a route for the root URL
+# Redirect root URL to /test
 @app.route('/')
 def index():
-    try:
-        return "Index route is working!"
-    except Exception as e:
-        logging.error(f"Error in index route: {e}")
-        logging.error(traceback.format_exc())
-        return "500 error", 500
+    return redirect(url_for('test'))
 
 # Add error handling
 @app.errorhandler(500)
