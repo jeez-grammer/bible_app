@@ -147,5 +147,6 @@ body {
     }
     .modal-body {
         padding: 10px; /* Adjusted padding for better spacing on mobile screens */
+        font-size: 0.5rem; /* Smaller font size for mobile screens */
     }
 }
