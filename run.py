@@ -12,6 +12,11 @@ logging.basicConfig(level=logging.ERROR)
 def test():
     return "Test route is working!"
 
+# Add a route for the root URL
+@app.route('/')
+def index():
+    return "Index route is working!"
+
 # Add error handling
 @app.errorhandler(500)
 def internal_error(error):
