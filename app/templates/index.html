@@ -24,7 +24,7 @@
             </ol>
             <div class="carousel-inner">
                 {% for item in data[:3] %}
-                    <div class="carousel-item {% if loop.first %}active{% endif %}" data-toggle="modal" data-target="#viewModal" data-img="{{ item['BackgroundImage'] }}" data-quote="{{ item['Quote'] }}" data-verse="{{ item['BibleVerse'] }}">
+                    <div class="carousel-item {% if loop.first %}active{% endif %}" data-toggle="modal" data-target="#viewModal" data-img="{{ item['BackgroundImage'] }}" data-quote="{{ item['Quote'] }}" data-verse="{{ item['BibleVerse'] }}" data-reflection="{{ item['Reflection'] }}">
                         <img src="{{ item['BackgroundImage'] }}" class="d-block w-100 carousel-img" alt="Background Image">
                         <div class="carousel-caption d-md-block">
                             <blockquote class="blockquote text-center">
