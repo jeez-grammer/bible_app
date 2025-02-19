@@ -26,7 +26,7 @@
                 {% for item in data[:3] %}
                     <div class="carousel-item {% if loop.first %}active{% endif %}">
                         <img src="{{ item['BackgroundImage'] }}" class="d-block w-100 carousel-img" alt="Background Image">
-                        <div class="carousel-caption d-none d-md-block">
+                        <div class="carousel-caption d-md-block">
                             <blockquote class="blockquote text-center">
                                 <p class="mb-0">{{ item['Quote'] }}</p>
                                 <footer class="blockquote-footer text-white">{{ item['BibleVerse'] }}</footer>
@@ -48,21 +48,13 @@
         <div class="row">
             {% for item in data[3:] %}
                 <div class="col-md-4 mb-4">
-                    <div class="card text-white" data-toggle="modal" data-target="#viewModal" data-img="{{ item['BackgroundImage'] }}" data-quote="{{ item['Quote'] }}" data-verse="{{ item['BibleVerse'] }}">
+                    <div class="card text-white" data-toggle="modal" data-target="#viewModal" data-img="{{ item['BackgroundImage'] }}" data-quote="{{ item['Quote'] }}" data-verse="{{ item['BibleVerse'] }}" data-reflection="{{ item['Reflection'] }}">
                         <img src="{{ item['BackgroundImage'] }}" class="card-img" alt="Background Image">
-                        <div class="card-img-overlay d-flex flex-column justify-content-center align-items-center">
-                            <blockquote class="blockquote text-center">
+                        <div class="card-img-overlay d-flex flex-column justify-content-center align-items-center card-caption">
+                            <blockquote class="blockquoted text-center">
                                 <p class="mb-0">{{ item['Quote'] }}</p>
                                 <footer class="blockquote-footer text-white">{{ item['BibleVerse'] }}</footer>
                             </blockquote>
-                        </div>
-                        <div class="card-footer d-flex justify-content-center align-items-center">
-                            <div class="reflection">
-                                <blockquote class="blockquote text-center">
-                                    <p class="mb-0">{{ item['Quote'] }}</p>
-                                    <footer class="blockquote-footer text-white">{{ item['Reflection'] }}</footer>
-                                </blockquote>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -89,10 +81,13 @@
                     <div class="modal-img-container">
                         <img id="modalImage" src="" class="img-fluid" alt="Background Image">
                         <div class="modal-img-overlay d-flex flex-column justify-content-center align-items-center">
-                            <blockquote class="blockquote text-center">
+                            <blockquote class="modal-c blockquote text-center">
                                 <p class="mb-0" id="modalQuote"></p>
                                 <footer class="blockquote-footer text-white" id="modalVerse"></footer>
                             </blockquote>
+                        </div>
+                        <div class="reflection-box">
+                            <p class="reflection-text" id="modalReflection"></p>
                         </div>
                     </div>
                 </div>
@@ -109,10 +104,12 @@
             var imgSrc = button.data('img');
             var quote = button.data('quote');
             var verse = button.data('verse');
+            var reflection = button.data('reflection');
             var modal = $(this);
             modal.find('#modalImage').attr('src', imgSrc);
             modal.find('#modalQuote').text(quote);
             modal.find('#modalVerse').text(verse);
+            modal.find('#modalReflection').text(reflection);
         });
     </script>
 </body>
