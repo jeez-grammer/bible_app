@@ -30,7 +30,7 @@ body {
 }
 
 .blockquote {
-    font-size: 1.2rem; /* Adjusted size to fit in the card */
+    font-size: 1rem; /* Adjusted size to fit in the card */
     font-weight: 700;
     font-family: 'Lora', serif;
     color: #fff;
@@ -38,7 +38,7 @@ body {
 }
 
 .blockquoted {
-    font-size: 0.8rem; /* Adjusted size to fit in the card */
+    font-size: 0.5rem; /* Adjusted size to fit in the card */
     font-weight: 700;
     font-family: 'Lora', serif;
     color: #fff;
