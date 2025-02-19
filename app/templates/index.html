@@ -102,11 +102,6 @@
         </div>
     </div>
 
-    <!-- Floating Visitor Counter -->
-    <div id="visitorCounter" class="floating-counter">
-        Visitors: <span id="visitorCount">0</span>
-    </div>
-
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -123,26 +118,6 @@
             modal.find('#modalVerse').text(verse);
             modal.find('#modalReflection').text(reflection);
         });
-
-        // Visitor Counter
-        document.addEventListener('DOMContentLoaded', function() {
-            var visitorCount = localStorage.getItem('visitorCount') || 0;
-            visitorCount++;
-            localStorage.setItem('visitorCount', visitorCount);
-            document.getElementById('visitorCount').textContent = visitorCount;
-        });
     </script>
-    <style>
-        .floating-counter {
-            position: fixed;
-            bottom: 10px;
-            right: 10px;
-            background: rgba(0, 0, 0, 0.7);
-            color: #fff;
-            padding: 10px;
-            border-radius: 5px;
-            z-index: 1000;
-        }
-    </style>
 </body>
 </html>

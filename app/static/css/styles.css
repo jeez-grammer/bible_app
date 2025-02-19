@@ -46,6 +46,10 @@ body {
     font-family: 'Lora', serif;
     color: #fff;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Ensure it takes the full height of the card */
 }
 
 .blockquote-footer {
