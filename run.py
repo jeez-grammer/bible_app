@@ -13,7 +13,7 @@ def test():
     return "Test route is working!"
 
 # Add a route for the root URL
-@app.route('/')
+@app.route('./')
 def index():
     try:
         return "Index route is working!"
