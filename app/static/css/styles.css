@@ -148,8 +148,6 @@ body {
     .carousel-caption {
         display: block; /* Ensure the caption is displayed on smaller screens */
     }
-    padding: 10px; /* Adjusted padding for better spacing on mobile screens */
-    font-size: 0.8rem; /* Adjusted font size for better readability on mobile screens */
 
 .modal-img-container img {
     height: auto; /* Ensure the image adjusts properly on mobile screens */
