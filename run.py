@@ -7,6 +7,11 @@ app = create_app()
 # Configure logging
 logging.basicConfig(level=logging.ERROR)
 
+# Add a simple route for testing
+@app.route('/test')
+def test():
+    return "Test route is working!"
+
 # Add error handling
 @app.errorhandler(500)
 def internal_error(error):
