@@ -131,7 +131,7 @@ body {
 /* Media queries for responsive design */
 @media (max-width: 430px) {
     .blockquote, .blockquoted {
-        font-size: 0.5rem; /* Adjusted font size for better readability on mobile screens */
+        font-size: 1rem; /* Adjusted font size for better readability on mobile screens */
     }
 
     .blockquote-footer {
@@ -144,5 +144,8 @@ body {
 
     .carousel-caption {
         display: block; /* Ensure the caption is displayed on smaller screens */
+    }
+    .modal-body {
+        padding: 10px; /* Adjusted padding for better spacing on mobile screens */
     }
 }
