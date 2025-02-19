@@ -30,7 +30,7 @@ body {
 }
 
 .blockquote {
-    font-size: 0.5rem; /* Adjusted size to fit in the card */
+    font-size: 1.2rem; /* Adjusted size to fit in the card */
     font-weight: 700;
     font-family: 'Lora', serif;
     color: #fff;
@@ -38,7 +38,7 @@ body {
 }
 
 .blockquoted {
-    font-size: 0.5rem; /* Adjusted size to fit in the card */
+    font-size: 1rem; /* Adjusted size to fit in the card */
     font-weight: 700;
     font-family: 'Lora', serif;
     color: #fff;
@@ -127,11 +127,15 @@ body {
     font-size: 0.8rem;
     color: #ddd;
 }
+.card-caption {
+    font-size: 0.8rem;
+    color: #ddd;
+}
 
 /* Media queries for responsive design */
 @media (max-width: 430px) {
     .blockquote, .blockquoted {
-        font-size: 0.5rem; /* Adjusted font size for better readability on mobile screens */
+        font-size: 1rem; /* Adjusted font size for better readability on mobile screens */
     }
 
     .blockquote-footer {
