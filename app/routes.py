@@ -10,5 +10,5 @@ def index():
         data = get_excel_data()
         return render_template('index.html', data=data)
     except Exception as e:
-        logging.error(f"Error in index route: {e}")
+        logging.error(f"Error in index route: {e}", exc_info=True)
         return "Internal Server Error", 500
