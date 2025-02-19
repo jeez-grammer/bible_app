@@ -15,7 +15,12 @@ def test():
 # Add a route for the root URL
 @app.route('/')
 def index():
-    return "Index route is working!"
+    try:
+        return "Index route is working!"
+    except Exception as e:
+        logging.error(f"Error in index route: {e}")
+        logging.error(traceback.format_exc())
+        return "500 error", 500
 
 # Add error handling
 @app.errorhandler(500)
